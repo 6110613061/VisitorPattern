@@ -1,19 +1,26 @@
 public class ShoppingCart implements ShoppingCartVisitor{
-    public int visit(Books book) {
-		int cost=0;
-		//apply 5$ discount if book price is greater than 50
-		if(book.getPrice() > 50){
-			cost = book.getPrice()-5;
-		}else cost = book.getPrice();
-		System.out.println("Book ISBN::"+book.getIsbnNumber() + " cost ="+cost);
-		return cost;
+    public int visit(Water water) {
+		int cost = 10;
+		//apply 5$ discount if water price is greater than 50
+		if(water.getPrice() > 60){
+			cost = water.getPrice()-5;
+		}
+		else {
+			cost = water.getPrice();
+		}
+		return System.out.println("water brand: "+water.getBrand()+" & cost= "+cost);
 	}
 
 	@Override
-	public int visit(Fruits fruit) {
-		int cost = fruit.getPricePerKg()*fruit.getWeight();
-		System.out.println(fruit.getName() + " cost = "+cost);
-		return cost;
+	public int visit(SparklingWater spWater) {
+		int cost = 15;
+		if(spWater.getPrice() > 70){
+			cost = spWater.getPrice()-5;
+		}
+		else {
+			cost = spWater.getPrice();
+		}
+		return System.out.println("spWater brand: "+spWater.getBrand()+" & cost= "+cost);
 	}
 
 }

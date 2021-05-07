@@ -1,7 +1,7 @@
 public class ShoppingCartClient {
     public static void main(String[] args) throws Exception {
-        ItemElements[] items = new ItemElements[]{new Books(20, "1234"),new Books(100, "5678"),
-				new Fruits(10, 2, "Banana"), new Fruits(5, 5, "Apple")};
+        ItemElements[] items = new ItemElements[]{new Water(10, "Singha"),new Water(10, "Crystal"),
+				new spWater(15, "Pepsi"), new spWater(5, "Coca-cola")};
 		
 		int total = calculatePrice(items);
 		System.out.println("Total Cost = "+total);
